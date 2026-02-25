@@ -3,7 +3,7 @@ import Image from "next/image";
 import QRCodeBlock from "@/components/QRCodeBlock";
 import EmailCapture from "@/components/EmailCapture";
 
-const START_URL = "https://horuum.com/start";
+const START_URL = "https://www.horuum.com/start";
 
 export default function LandingPage() {
   return (

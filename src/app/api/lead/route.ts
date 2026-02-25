@@ -6,18 +6,36 @@ function isValidEmail(email: string) {
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const email = String(body?.email ?? "").trim().toLowerCase();
+    const { email } = await req.json();
+    const cleanEmail = String(email ?? "").trim().toLowerCase();
 
-    if (!isValidEmail(email)) {
+    if (!isValidEmail(cleanEmail)) {
       return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
     }
 
-    // TODO: brancher ici un vrai stockage / provider:
-    // - Mailchimp / ConvertKit (API)
-    // - Resend (email + audience)
-    // - Supabase (table leads)
-    console.log("[HORUUM lead]", email);
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const key = process.env.SUPABASE_ANON_KEY;
+
+    if (!url || !key) {
+      return NextResponse.json({ ok: false, error: "Missing Supabase env vars" }, { status: 500 });
+    }
+
+    const res = await fetch(`${url}/rest/v1/leads`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        Prefer: "return=representation",
+      },
+      body: JSON.stringify({ email: cleanEmail }),
+    });
+
+    const text = await res.text();
+
+    if (!res.ok) {
+      return NextResponse.json({ ok: false, error: text }, { status: 500 });
+    }
 
     return NextResponse.json({ ok: true });
   } catch {
