@@ -14,8 +14,8 @@ export default function StartPage() {
           <Image
             src="/logohoruum.png"
             alt="HORUUM Logo"
-            width={64}
-            height={64}
+            width={105}
+            height={105}
             priority
             style={{
               objectFit: "contain",
