@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import StartExperience from "@/components/StartExperience";
 
 export const metadata = {
   title: "HORUUM — Start",
@@ -34,11 +35,12 @@ export default function StartPage() {
         </h1>
 
         <p className="slogan" style={{ maxWidth: 560 }}>
-          Keep it simple: breathe, align, activate, execute. This page can later become your guided flow
-          (audio, video, timer, or step-by-step).
+          Breathe. Align. Activate. Execute. A premium guided ritual — fast, repeatable, distraction-free.
         </p>
 
-        <div className="card" style={{ marginTop: 12 }}>
+        <StartExperience />
+
+        <div className="card" style={{ marginTop: 14 }}>
           <h2 className="h2">Quick ritual (4 steps)</h2>
 
           <div className="steps" role="list">
@@ -47,19 +49,16 @@ export default function StartPage() {
               <b>Prepare</b>
               <p>Silence distractions. Set your intention for today.</p>
             </div>
-
             <div className="step" role="listitem">
               <span className="n">2</span>
               <b>Align</b>
               <p>Slow breathing for 60 seconds. Stable posture.</p>
             </div>
-
             <div className="step" role="listitem">
               <span className="n">3</span>
               <b>Activate</b>
               <p>Focus on one outcome. Make it specific.</p>
             </div>
-
             <div className="step" role="listitem">
               <span className="n">4</span>
               <b>Execute</b>
@@ -81,7 +80,6 @@ export default function StartPage() {
 
       <footer className="footer">
         <div>© {new Date().getFullYear()} HORUUM.</div>
-
         <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
           <a href="mailto:hello@horuum.com">Contact</a>
         </div>
