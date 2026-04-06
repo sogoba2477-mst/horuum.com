@@ -7,19 +7,29 @@ export default function QRCodeBlock({ url }: { url: string }) {
   const [dataUrl, setDataUrl] = useState<string>("");
 
   useEffect(() => {
-    let mounted = true;
-    QRCode.toDataURL(url, { errorCorrectionLevel: "H", margin: 1, scale: 6 })
-      .then((u) => mounted && setDataUrl(u))
-      .catch(() => mounted && setDataUrl(""));
-    return () => {
-      mounted = false;
-    };
+    QRCode.toDataURL(url, {
+      width: 180,
+
+      // 🎨 COULEURS PREMIUM
+      color: {
+        dark: "#d7b56d",   // gold
+        light: "#0b0b12",  // fond noir léger (PAS pur noir)
+      },
+
+      margin: 1,
+    }).then(setDataUrl);
   }, [url]);
 
-  if (!dataUrl) return <small style={{ color: "rgba(255,255,255,.68)", padding: 12 }}>Generating QR…</small>;
-
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={dataUrl} alt={`QR code to ${url}`} style={{ width: 140, height: 140 }} />
+    <img
+      src={dataUrl}
+      alt="QR Code"
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "contain",
+        borderRadius: "12px",
+      }}
+    />
   );
 }
