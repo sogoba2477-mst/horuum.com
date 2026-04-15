@@ -176,11 +176,10 @@ export default function LandingPage() {
     src="/horuumqrcode.png"
     alt="HORUUM QR Code"
     style={{
-  width:160px;
-  height:160px;
-  object-fit:contain;
-  border-radius:16px;
-  filter: drop-shadow(0 8px 20px rgba(180,140,30,.35));
+      width: "160px",
+      height: "160px",
+      objectFit: "contain",
+      borderRadius: "16px",
     }}
   />
 </div>
