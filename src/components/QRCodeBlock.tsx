@@ -10,10 +10,9 @@ export default function QRCodeBlock({ url }: { url: string }) {
     QRCode.toDataURL(url, {
       width: 180,
 
-      // 🎨 COULEURS PREMIUM
       color: {
-        dark: "#d7b56d",   // gold
-        light: "#0b0b12",  // fond noir léger (PAS pur noir)
+        dark: "#b48c1e",   // 🟡 TON OR EXACT (RGB 180,140,30)
+        light: "#0b0b12",  // fond noir doux (important pour scan)
       },
 
       margin: 1,
