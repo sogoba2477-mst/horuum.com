@@ -171,9 +171,19 @@ export default function LandingPage() {
         <div className="card" style={{ marginTop: 18 }}>
           <h2 className="h2">🔗 QR CODE FINAL</h2>
           <div className="qr-box">
-            <div className="qr" aria-label={`QR Code to ${START_URL}`}>
-              <QRCodeBlock url={START_URL} />
-            </div>
+<div className="qr" aria-label="QR Code">
+  <img
+    src="/horuumqrcode.png"
+    alt="HORUUM QR Code"
+    style={{
+  width:160px;
+  height:160px;
+  object-fit:contain;
+  border-radius:16px;
+  filter: drop-shadow(0 8px 20px rgba(180,140,30,.35));
+    }}
+  />
+</div>
             <div className="qr-meta">
               <p className="p" style={{ marginBottom: 10 }}>
                 Scan to start the experience: <span className="gold">{START_URL}</span>
