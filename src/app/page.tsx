@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import QRCodeBlock from "@/components/QRCodeBlock";
 import EmailCapture from "@/components/EmailCapture";
 
 const START_URL = "https://www.horuum.com/start";
@@ -22,13 +23,13 @@ export default function LandingPage() {
           />
           <div>HORUUM</div>
         </div>
-        <div className="pill">First Edition</div>
+        <div className="pill">Black • Gold • Minimal</div>
       </header>
 
-      <section className="hero">
+      <div className="hero">
         <div className="panel hero-left">
           <div className="eyebrow">
-            <span className="dot" /> PREMIUM RITUAL OBJECT
+            <span className="dot" /> PREMIUM RITUAL EXPERIENCE
           </div>
 
           <h1>
@@ -37,8 +38,8 @@ export default function LandingPage() {
           </h1>
 
           <p className="slogan">
-            A premium ritual object designed for focus, clarity and inner momentum.
-            HORUUM blends physical craftsmanship with a private digital experience.
+            HORUUM is designed as a focused, premium ritual — minimal, intentional, and built to help you
+            reconnect with clarity, control, and inner momentum.
           </p>
 
           <div className="cta-row">
@@ -46,7 +47,7 @@ export default function LandingPage() {
               Enter your experience
             </Link>
             <a className="btn" href="#email">
-              Join the private list
+              Get early access
             </a>
           </div>
         </div>
@@ -55,88 +56,61 @@ export default function LandingPage() {
           <div className="shine" aria-hidden="true" />
           <div className="product-card">
             <div className="product-title">
-              <b>HORUUM WANDS</b>
-              <span className="meta">Copper • Gunmetal • Ritual</span>
+              <b>HORUUM</b>
+              <span className="meta">Luxury • Minimal • Ritual</span>
             </div>
 
             <div className="divider" />
 
-            <div className="specs">
-              <div className="spec">
-                <small>Material</small>
-                <strong>Precision Metal</strong>
+            <div className="specs" role="list">
+              <div className="spec" role="listitem">
+                <small>Designed for</small>
+                <strong>Focus & Energy</strong>
               </div>
-              <div className="spec">
+              <div className="spec" role="listitem">
                 <small>Experience</small>
-                <strong>QR Ritual</strong>
+                <strong>Start Ritual</strong>
               </div>
-              <div className="spec">
-                <small>Edition</small>
-                <strong>First Drop</strong>
+              <div className="spec" role="listitem">
+                <small>Format</small>
+                <strong>4-Step Guide</strong>
               </div>
-              <div className="spec">
+              <div className="spec" role="listitem">
                 <small>Access</small>
-                <strong>Private Guide</strong>
+                <strong>QR / Mobile</strong>
               </div>
             </div>
 
             <div className="cta-row" style={{ marginTop: "auto" }}>
               <a className="btn" href="/horuum-guide.pdf" download>
-                Access the Ritual Guide
+                Download PDF
               </a>
               <Link className="btn" href="/start">
-                Start Ritual
+                How it works
               </Link>
             </div>
+
+            <p className="meta" style={{ margin: 0 }}>
+              Tip: upload your PDF as <span className="gold">/horuum-guide.pdf</span>
+            </p>
           </div>
         </div>
-      </section>
-
-      <section className="card premium-section">
-        <h2 className="h2">The HORUUM System</h2>
-        <p className="p">
-          HORUUM is not only a product. It is an entry point into a complete ritual ecosystem:
-          a physical object, a digital experience, a ritual card and a private guide.
-        </p>
-
-        <div className="steps" style={{ marginTop: 18 }}>
-          <div className="step">
-            <span className="n">1</span>
-            <b>The Object</b>
-            <p>Premium wands designed to feel minimal, tactile and intentional.</p>
-          </div>
-          <div className="step">
-            <span className="n">2</span>
-            <b>The Card</b>
-            <p>A physical access point to the HORUUM digital ritual.</p>
-          </div>
-          <div className="step">
-            <span className="n">3</span>
-            <b>The Experience</b>
-            <p>A guided moment for breath, focus and inner activation.</p>
-          </div>
-          <div className="step">
-            <span className="n">4</span>
-            <b>The Guide</b>
-            <p>A private ritual guide designed for repetition and clarity.</p>
-          </div>
-        </div>
-      </section>
+      </div>
 
       <section className="grid">
         <div className="card">
           <h2 className="h2">Unlock your energy</h2>
           <p className="p">
-            Energy is not random. It is directed. HORUUM helps transform a simple moment into
-            a deliberate ritual of breath, intention and execution.
+            Energy isn’t a mood — it’s a system. HORUUM is built around a short ritual that aligns breath,
+            attention, and intention in minutes, so your day starts with direction.
           </p>
         </div>
 
         <div className="card">
-          <h2 className="h2">Crafted for presence</h2>
+          <h2 className="h2">A premium, distraction-free design</h2>
           <p className="p">
-            Designed with premium materials, clean proportions and a luxury black-and-gold universe,
-            HORUUM is built to be held, used and remembered.
+            Minimal interface. No noise. No clutter. Just the essentials — delivered with a luxury finish
+            and a mobile-first experience.
           </p>
         </div>
       </section>
@@ -144,34 +118,34 @@ export default function LandingPage() {
       <section id="how">
         <div className="card">
           <h2 className="h2">How to use</h2>
-          <p className="p">A simple 4-step ritual — designed to be consistent, repeatable and fast.</p>
+          <p className="p">A simple 4-step ritual — designed to be consistent, repeatable, and fast.</p>
 
-          <div className="steps">
-            <div className="step">
+          <div className="steps" role="list">
+            <div className="step" role="listitem">
               <span className="n">1</span>
               <b>Prepare</b>
-              <p>Find a calm place. Silence distractions. Set a clear intention.</p>
+              <p>Find a calm place. Silence distractions. Set a 3–5 min window.</p>
             </div>
-            <div className="step">
+            <div className="step" role="listitem">
               <span className="n">2</span>
               <b>Align</b>
-              <p>Slow your breath. Stabilize your posture. Bring attention inward.</p>
+              <p>Slow breathing. Stable posture. Let attention settle into the moment.</p>
             </div>
-            <div className="step">
+            <div className="step" role="listitem">
               <span className="n">3</span>
               <b>Activate</b>
-              <p>Focus on one outcome. Give your energy a direction.</p>
+              <p>Follow the guided focus cue. Lock your intention into one clear outcome.</p>
             </div>
-            <div className="step">
+            <div className="step" role="listitem">
               <span className="n">4</span>
               <b>Execute</b>
-              <p>Take one immediate action while the signal is strong.</p>
+              <p>Choose one immediate action. Start while the signal is strong.</p>
             </div>
           </div>
 
           <div className="cta-row" style={{ marginTop: 16 }}>
             <a className="btn btn-primary" href="/horuum-guide.pdf" download>
-              Access the Ritual Guide
+              Download PDF
             </a>
             <Link className="btn" href="/start">
               Enter your experience
@@ -180,30 +154,14 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="card premium-section">
-        <h2 className="h2">Brand philosophy</h2>
-        <p className="p">
-          HORUUM stands for deliberate power — not noise, not performance theater, not empty motivation.
-          It is a modern ritual system built around clarity, discipline and intentional living.
-          <br /><br />
-          <span className="gold">Power is awakened when attention is controlled.</span>
-        </p>
-      </section>
-
-      <section className="card premium-section">
-        <h2 className="h2">First Edition Drop</h2>
-        <p className="p">
-          The first HORUUM release will be produced in limited quantities.
-          Join the private list to access launch details before public release.
-        </p>
-
-        <div className="cta-row">
-          <a className="btn btn-primary" href="#email">
-            Join the private list
-          </a>
-          <Link className="btn" href="/start">
-            Preview the experience
-          </Link>
+      <section>
+        <div className="card">
+          <h2 className="h2">Brand philosophy</h2>
+          <p className="p">
+            HORUUM stands for deliberate power — not performance. Not noise. Not motivation hacks.
+            We believe strength is built through repetition, clarity, and ritual.{" "}
+            <span className="gold">Power is awakened</span> when you control your attention.
+          </p>
         </div>
       </section>
 
@@ -211,26 +169,23 @@ export default function LandingPage() {
         <EmailCapture />
 
         <div className="card" style={{ marginTop: 18 }}>
-          <h2 className="h2">Private ritual access</h2>
+          <h2 className="h2">🔗 QR CODE FINAL</h2>
           <div className="qr-box">
-            <div className="qr" aria-label="HORUUM QR Code">
-              <img
-                src="/horuumqrcode.png"
-                alt="HORUUM QR Code"
-                style={{
-                  width: "160px",
-                  height: "160px",
-                  objectFit: "contain",
-                  borderRadius: "16px",
-                }}
-              />
-            </div>
-
+<div className="qr" aria-label="QR Code">
+  <img
+    src="/horuumqrcode.png"
+    alt="HORUUM QR Code"
+    style={{
+      width: "160px",
+      height: "160px",
+      objectFit: "contain",
+      borderRadius: "16px",
+    }}
+  />
+</div>
             <div className="qr-meta">
               <p className="p" style={{ marginBottom: 10 }}>
-                Scan to enter the HORUUM experience:
-                <br />
-                <span className="gold">{START_URL}</span>
+                Scan to start the experience: <span className="gold">{START_URL}</span>
               </p>
               <a className="btn" href={START_URL}>
                 Open /start
