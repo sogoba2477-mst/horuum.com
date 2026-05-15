@@ -32,10 +32,12 @@ export default function LandingPage() {
             <span className="dot" /> PREMIUM RITUAL EXPERIENCE
           </div>
 
-          <h1>
-            <span className="gold">Power</span> is not given.<br />
-            It is awakened.
-          </h1>
+<h1>
+  <span className="gold">Power</span> is not<br />
+  given.<br />
+  It is<br />
+  awakened.
+</h1>
 
           <p className="slogan">
             HORUUM is designed as a focused, premium ritual — minimal, intentional, and built to help you
