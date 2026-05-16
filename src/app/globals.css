@@ -775,3 +775,194 @@ section{
     text-align:center;
   }
 }
+
+/* =========================================================
+   HORUUM — ULTRA PREMIUM FINISH
+   Add at the END of globals.css
+========================================================= */
+
+/* Fine cinematic grain */
+body::selection{
+  background:rgba(180,140,30,.45);
+  color:#fff;
+}
+
+.wrap::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.055;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+/* Premium header refinement */
+.topbar{
+  max-width:1080px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.topbar::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:999px;
+  padding:1px;
+  background:linear-gradient(90deg, transparent, rgba(242,223,178,.35), transparent);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+}
+
+/* Luxury editorial hero */
+.hero-left{
+  min-height:560px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+h1{
+  text-wrap:balance;
+}
+
+.slogan{
+  max-width:50ch;
+}
+
+/* Premium gold shimmer on highlighted word */
+.gold{
+  background-size:220% auto;
+  animation:goldShimmer 7s ease-in-out infinite;
+}
+
+@keyframes goldShimmer{
+  0%{background-position:0% center}
+  50%{background-position:100% center}
+  100%{background-position:0% center}
+}
+
+/* Card luxury border light */
+.panel,
+.card{
+  isolation:isolate;
+}
+
+.panel > *,
+.card > *{
+  position:relative;
+  z-index:2;
+}
+
+.panel::after,
+.card::after{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.10), transparent 35%, rgba(180,140,30,.10) 100%);
+  border:1px solid rgba(255,255,255,.045);
+}
+
+/* Subtle luxury shine */
+.panel:hover::before,
+.card:hover::before{
+  background:
+    radial-gradient(680px 300px at 12% 0%, rgba(242,223,178,.16), transparent 62%),
+    linear-gradient(120deg, transparent 0%, rgba(255,255,255,.055) 48%, transparent 62%);
+}
+
+/* Premium buttons with light sweep */
+.btn{
+  overflow:hidden;
+}
+
+.btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:75%;
+  height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+  transform:skewX(-18deg);
+  transition:left .75s ease;
+}
+
+.btn:hover::before{
+  left:130%;
+}
+
+/* Product card: deeper luxury */
+.product-card{
+  background:
+    radial-gradient(420px 240px at 50% -10%, rgba(180,140,30,.16), transparent 64%),
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.12));
+  border-radius:calc(var(--radius) - 6px);
+}
+
+/* Specs like premium modules */
+.spec{
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+.spec strong{
+  font-weight:760;
+}
+
+/* More premium QR capsule */
+.qr{
+  position:relative;
+}
+
+.qr::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:28px;
+  background:linear-gradient(135deg, rgba(242,223,178,.38), transparent 42%, rgba(180,140,30,.28));
+  z-index:0;
+}
+
+.qr img{
+  position:relative;
+  z-index:2;
+  background:#050507;
+}
+
+/* Footer more discreet */
+.footer{
+  opacity:.82;
+}
+
+/* Desktop extra spacing */
+@media (min-width:1024px){
+  section{
+    padding:42px 0;
+  }
+
+  .grid{
+    gap:22px;
+  }
+
+  .hero{
+    gap:26px;
+  }
+}
+
+/* Mobile premium correction */
+@media (max-width:560px){
+  .hero-left{
+    min-height:auto;
+  }
+
+  h1{
+    line-height:1.04;
+  }
+
+  .topbar{
+    margin-bottom:18px;
+  }
+}
