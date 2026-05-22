@@ -966,3 +966,75 @@ h1{
     margin-bottom:18px;
   }
 }
+
+
+.inner-chamber{
+  padding:34px;
+}
+
+.inner-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:22px;
+}
+
+.inner-box,
+.notice-box{
+  padding:20px;
+  border-radius:22px;
+  border:1px solid rgba(242,223,178,.14);
+  background:
+    radial-gradient(260px 140px at 20% 0%, rgba(180,140,30,.12), transparent 65%),
+    rgba(0,0,0,.22);
+}
+
+.inner-box h3,
+.notice-box h3{
+  margin:0 0 12px;
+  font-size:15px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--gold2);
+}
+
+.inner-box ul,
+.notice-box ul{
+  margin:0;
+  padding-left:18px;
+  color:rgba(255,255,255,.66);
+  line-height:1.8;
+  font-size:14px;
+}
+
+.notice-box{
+  margin-top:20px;
+}
+
+.signature{
+  margin-top:24px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.10);
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.signature strong{
+  letter-spacing:3px;
+  color:var(--gold2);
+}
+
+.signature span{
+  color:rgba(255,255,255,.62);
+}
+
+@media (max-width:760px){
+  .inner-grid{
+    grid-template-columns:1fr;
+  }
+
+  .inner-chamber{
+    padding:24px;
+  }
+}

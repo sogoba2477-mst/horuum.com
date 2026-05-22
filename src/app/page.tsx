@@ -122,6 +122,67 @@ export default function LandingPage() {
           <h2 className="h2">How to use</h2>
           <p className="p">A simple 4-step ritual — designed to be consistent, repeatable, and fast.</p>
 
+          <section>
+  <div className="card inner-chamber">
+    <div className="eyebrow">
+      <span className="dot" /> THE INNER CHAMBER
+    </div>
+
+    <h2 className="h2">A private space for personal meaning</h2>
+
+    <p className="p">
+      Every HORUUM Wand is designed with an internal chamber — a private space intended to make
+      the experience deeply personal. This chamber may be left empty, preserving the wand’s pure
+      metallic balance and substantial weight, or it may hold a small symbolic object chosen by its owner.
+    </p>
+
+    <div className="inner-grid">
+      <div className="inner-box">
+        <h3>What it may hold</h3>
+        <ul>
+          <li>A mineral fragment</li>
+          <li>Fine dry sand</li>
+          <li>A written intention</li>
+          <li>A small keepsake connected to focus, memory, grounding, or purpose</li>
+        </ul>
+      </div>
+
+      <div className="inner-box">
+        <h3>Suggested uses</h3>
+        <ul>
+          <li>Meditation rituals</li>
+          <li>Breathwork sessions</li>
+          <li>Focus and grounding routines</li>
+          <li>Symbolic intention practices</li>
+          <li>Personal reflection moments</li>
+        </ul>
+      </div>
+    </div>
+
+    <p className="p" style={{ marginTop: 18 }}>
+      The chamber is not meant for storage, but for intention. HORUUM was created around the idea
+      that true rituals are personal. Each wand becomes unique to its owner — a refined object shaped
+      not only by design, but by personal significance.
+    </p>
+
+    <div className="notice-box">
+      <h3>Important Notice</h3>
+      <ul>
+        <li>Only insert dry and clean materials.</li>
+        <li>Avoid liquids or corrosive substances.</li>
+        <li>Do not overfill the chamber.</li>
+        <li>Ensure the cap is securely closed before use.</li>
+        <li>HORUUM products are designed for wellness, relaxation, mindfulness, and personal ritual experiences only.</li>
+      </ul>
+    </div>
+
+    <div className="signature">
+      <strong>HORUUM</strong>
+      <span>Power is not given. It is awakened.</span>
+    </div>
+  </div>
+</section>
+
           <div className="steps" role="list">
             <div className="step" role="listitem">
               <span className="n">1</span>
