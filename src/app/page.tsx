@@ -131,24 +131,30 @@ export default function LandingPage() {
     <h2 className="h2">A private space for personal meaning</h2>
 
     <p className="p">
-      Every HORUUM Wand is designed with an internal chamber — a private space intended to make
-      the experience deeply personal. This chamber may be left empty, preserving the wand’s pure
-      metallic balance and substantial weight, or it may hold a small symbolic object chosen by its owner.
+      HORUUM Wands are fully designed to be used exactly as they are — with their natural metallic balance,
+      weight and tactile presence.
+    </p>
+
+    <p className="p" style={{ marginTop: 16 }}>
+      For those who wish to make the experience more personal, each wand also includes an optional internal chamber:
+      a private space intended for symbolic meaning and personal ritual.
     </p>
 
     <div className="inner-grid">
       <div className="inner-box">
         <h3>What it may hold</h3>
+
         <ul>
           <li>A mineral fragment</li>
           <li>Fine dry sand</li>
           <li>A written intention</li>
-          <li>A small keepsake connected to focus, memory, grounding, or purpose</li>
+          <li>A small keepsake connected to focus, grounding, memory or purpose</li>
         </ul>
       </div>
 
       <div className="inner-box">
         <h3>Suggested uses</h3>
+
         <ul>
           <li>Meditation rituals</li>
           <li>Breathwork sessions</li>
@@ -159,20 +165,28 @@ export default function LandingPage() {
       </div>
     </div>
 
-    <p className="p" style={{ marginTop: 18 }}>
-      The chamber is not meant for storage, but for intention. HORUUM was created around the idea
-      that true rituals are personal. Each wand becomes unique to its owner — a refined object shaped
-      not only by design, but by personal significance.
+    <p className="p" style={{ marginTop: 22 }}>
+      Others may prefer to leave the chamber empty.
+    </p>
+
+    <p className="p" style={{ marginTop: 14 }}>
+      The chamber is not meant for storage, but for intention.
+      Each HORUUM Wand ultimately becomes unique to its owner —
+      shaped not only by design, but by personal significance.
     </p>
 
     <div className="notice-box">
       <h3>Important Notice</h3>
+
       <ul>
         <li>Only insert dry and clean materials.</li>
         <li>Avoid liquids or corrosive substances.</li>
         <li>Do not overfill the chamber.</li>
         <li>Ensure the cap is securely closed before use.</li>
-        <li>HORUUM products are designed for wellness, relaxation, mindfulness, and personal ritual experiences only.</li>
+        <li>
+          HORUUM products are designed for wellness, relaxation,
+          mindfulness and personal ritual experiences only.
+        </li>
       </ul>
     </div>
 
