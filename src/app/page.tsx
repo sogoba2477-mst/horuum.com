@@ -9,7 +9,7 @@ export default function LandingPage() {
   return (
     <div className="wrap">
       <header className="topbar">
-        <div className="brand" aria-label="HORUUM">
+        <Link href="/" className="brand" aria-label="HORUUM">
           <Image
             src="/logohoruum.png"
             alt="HORUUM Logo"
@@ -22,7 +22,7 @@ export default function LandingPage() {
             }}
           />
           <div>HORUUM</div>
-        </div>
+        </Link>
         <div className="pill">Black • Gold • Minimal</div>
       </header>
 
