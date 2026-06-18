@@ -242,6 +242,102 @@ export default function LandingPage() {
         </div>
       </section>
 
+<section>
+  <div className="card testimonials-card">
+    <div className="eyebrow testimonials-eyebrow">
+      <span className="dot" /> EARLY IMPRESSIONS
+    </div>
+
+    <h2 className="h2 testimonials-title">A ritual people remember</h2>
+
+    <p className="p testimonials-subtitle">
+      First impressions from early members discovering the HORUUM ritual experience.
+    </p>
+
+    <div className="rating-strip">
+      <div>
+        <strong>4.9</strong>
+        <span>/5</span>
+      </div>
+      <p>Average early experience rating</p>
+    </div>
+
+    <div className="testimonials">
+      <div className="testimonial featured-testimonial">
+        <img src="/user1.jpg" alt="Sarah M." className="testimonial-avatar" />
+        <div className="stars">★★★★★</div>
+        <p>
+          “The moment I hold the wands, everything slows down. It has become part
+          of my morning focus ritual.”
+        </p>
+        <h3>Sarah M.</h3>
+        <span className="testimonial-role">Meditation & Focus</span>
+      </div>
+
+      <div className="testimonial">
+        <img src="/user2.jpg" alt="Michael R." className="testimonial-avatar" />
+        <div className="stars">★★★★★</div>
+        <p>
+          “The craftsmanship feels exceptional. More like a luxury object than a
+          simple wellness accessory.”
+        </p>
+        <h3>Michael R.</h3>
+        <span className="testimonial-role">Executive Performance</span>
+      </div>
+
+      <div className="testimonial">
+        <img src="/user3.jpg" alt="Emma L." className="testimonial-avatar" />
+        <div className="stars">★★★★★</div>
+        <p>
+          “Elegant, minimalist and deeply personal. HORUUM creates a unique ritual experience.”
+        </p>
+        <h3>Emma L.</h3>
+        <span className="testimonial-role">Wellness Routine</span>
+      </div>
+
+      <div className="testimonial">
+        <img src="/user4.jpg" alt="David K." className="testimonial-avatar" />
+        <div className="stars">★★★★★</div>
+        <p>
+          “A beautiful reminder to pause, focus and reconnect with my intentions each day.”
+        </p>
+        <h3>David K.</h3>
+        <span className="testimonial-role">Daily Grounding</span>
+      </div>
+
+      <div className="testimonial">
+        <img src="/user5.jpg" alt="Sophia C." className="testimonial-avatar" />
+        <div className="stars">★★★★★</div>
+        <p>
+          “The packaging, the weight, the details — everything feels thoughtfully designed.”
+        </p>
+        <h3>Sophia C.</h3>
+        <span className="testimonial-role">Design Lover</span>
+      </div>
+
+      <div className="testimonial">
+        <img src="/user6.jpg" alt="James T." className="testimonial-avatar" />
+        <div className="stars">★★★★★</div>
+        <p>
+          “I use HORUUM before important decisions and planning sessions. It helps me stay centered.”
+        </p>
+        <h3>James T.</h3>
+        <span className="testimonial-role">Executive Focus</span>
+      </div>
+
+      <div className="testimonial">
+        <img src="/user7.jpg" alt="Olivia B." className="testimonial-avatar" />
+        <div className="stars">★★★★★</div>
+        <p>
+          “More than an object — it feels like a personal ritual that brings clarity and focus.”
+        </p>
+        <h3>Olivia B.</h3>
+        <span className="testimonial-role">Personal Ritual</span>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section id="email">
         <EmailCapture />
 
