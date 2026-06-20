@@ -259,7 +259,7 @@ export default function LandingPage() {
         <strong>4.9</strong>
         <span>/5</span>
       </div>
-      <p>Average early experience rating</p>
+      <p>Based on 9 early experience reviews</p>
     </div>
 
     <div className="testimonials">
@@ -334,6 +334,28 @@ export default function LandingPage() {
         <h3>Olivia B.</h3>
         <span className="testimonial-role">Personal Ritual</span>
       </div>
+
+      <div className="testimonial">
+  <img src="/user8.jpg" alt="Daniel H." className="testimonial-avatar" />
+  <div className="stars">★★★★★</div>
+  <p>
+    “The ritual creates a clear transition between distraction and focus.
+    It has become part of my daily routine.”
+  </p>
+  <h3>Daniel H.</h3>
+  <span className="testimonial-role">Mental Clarity</span>
+</div>
+
+<div className="testimonial">
+  <img src="/user9.jpg" alt="Rodrigo M." className="testimonial-avatar" />
+  <div className="stars">★★★★★</div>
+  <p>
+    “The combination of craftsmanship, symbolism and intention makes HORUUM
+    feel unlike anything else I own.”
+  </p>
+  <h3>Rodrigo M.</h3>
+  <span className="testimonial-role">Mindful Living</span>
+</div>
     </div>
   </div>
 </section>
