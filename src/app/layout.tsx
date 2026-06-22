@@ -1,5 +1,4 @@
 import "./globals.css";
-import GlobalAudio from "@/components/GlobalAudio";
 
 export const metadata = {
   title: "HORUUM — Power is not given. It is awakened.",
@@ -21,7 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <GlobalAudio />
         {children}
       </body>
     </html>
