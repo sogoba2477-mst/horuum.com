@@ -1,9 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+
 export default function IntroPage() {
   return (
-    <main className="intro-page">
+   
+   
+   <main className="intro-page">
+    
       <div className="intro-aura" />
 
       <section className="intro-content">

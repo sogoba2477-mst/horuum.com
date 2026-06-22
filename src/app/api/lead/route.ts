@@ -6,18 +6,24 @@ function isValidEmail(email: string) {
 
 export async function POST(req: Request) {
   try {
-    const { email } = await req.json();
-    const cleanEmail = String(email ?? "").trim().toLowerCase();
+    const body = await req.json();
+    const email = String(body?.email ?? "").trim().toLowerCase();
 
-    if (!isValidEmail(cleanEmail)) {
-      return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
+    if (!isValidEmail(email)) {
+      return NextResponse.json(
+        { ok: false, error: "Please enter a valid email address." },
+        { status: 400 }
+      );
     }
 
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const key = process.env.SUPABASE_ANON_KEY;
 
     if (!url || !key) {
-      return NextResponse.json({ ok: false, error: "Missing Supabase env vars" }, { status: 500 });
+      return NextResponse.json(
+        { ok: false, error: "Missing Supabase environment variables." },
+        { status: 500 }
+      );
     }
 
     const res = await fetch(`${url}/rest/v1/leads`, {
@@ -28,17 +34,23 @@ export async function POST(req: Request) {
         Authorization: `Bearer ${key}`,
         Prefer: "return=representation",
       },
-      body: JSON.stringify({ email: cleanEmail }),
+      body: JSON.stringify({ email }),
     });
 
     const text = await res.text();
 
     if (!res.ok) {
-      return NextResponse.json({ ok: false, error: text }, { status: 500 });
+      return NextResponse.json(
+        { ok: false, error: text || "Supabase insert failed." },
+        { status: 500 }
+      );
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, inserted: text });
   } catch {
-    return NextResponse.json({ ok: false, error: "Bad request" }, { status: 400 });
+    return NextResponse.json(
+      { ok: false, error: "Bad request. Could not read request body." },
+      { status: 400 }
+    );
   }
 }
