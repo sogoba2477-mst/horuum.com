@@ -1,38 +1,37 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
 export default function IntroPage() {
   return (
-   
-   
-   <main className="intro-page">
-    
+    <main className="intro-page">
       <div className="intro-aura" />
 
       <section className="intro-content">
         <div className="intro-logo-wrap">
+          <div className="intro-light-ring" />
+          <div className="intro-light-core" />
+
           <Image
-            src="/horuumlogosvg.svg"
-            alt="HORUUM Logo"
-            width={340}
-            height={340}
+            src="/horuum3D.gif"
+            alt="HORUUM 3D Logo"
+            width={1500}
+            height={750}
             priority
-            className="intro-logo"
+            unoptimized
+            className="intro-logo-video"
           />
         </div>
 
-        <p className="intro-kicker">HORUUM</p>
+        <p className="intro-kicker"> <br /> <br /> <br /> HORUUM</p>
 
-        <h1 className="intro-title">
-          Power is not given.
-          <br />
-          It is awakened.
-        </h1>
+<h1 className="intro-title">
+  Power is not given.
+  <br />
+  <span className="awakened">It is awakened.</span>
+</h1>
 
         <p className="intro-text">
-          Enter a private ritual experience designed for focus,
-          presence, clarity and inner command.
+         A ritual object for focus, presence and inner mastery.
         </p>
 
         <div className="intro-actions">
