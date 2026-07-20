@@ -21,13 +21,14 @@ export async function POST(request: Request) {
     }
 
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+    const supabaseKey =
+      process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
     if (!supabaseUrl || !supabaseKey) {
       return NextResponse.json(
         {
           ok: false,
-          error: "Supabase environment variables are missing.",
+          error: "Email service is not configured.",
         },
         { status: 500 }
       );
@@ -47,19 +48,33 @@ export async function POST(request: Request) {
     if (error) {
       console.error("Supabase insert error:", error);
 
+      if (error.code === "23505") {
+        return NextResponse.json(
+          {
+            ok: true,
+            message: "You're already part of the HORUUM Circle.",
+          },
+          { status: 200 }
+        );
+      }
+
       return NextResponse.json(
         {
           ok: false,
-          error: error.message,
+          error: "Something went wrong. Please try again.",
         },
         { status: 500 }
       );
     }
 
-    return NextResponse.json({
-      ok: true,
-      message: "Thanks — you’re on the list.",
-    });
+    return NextResponse.json(
+      {
+        ok: true,
+        message:
+          "Welcome to the HORUUM Circle. Your place has been reserved.",
+      },
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Lead API error:", error);
 
